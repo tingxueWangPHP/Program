@@ -48,6 +48,19 @@
 		closedir($dh);
 	}
 	
+	//使用享元模式获取类的实例
+	function import($class, $namespace='lib')
+	{
+		
+		static $FlyWeight;
+		
+		if (is_null($FlyWeight)) {
+			$FlyWeight = \lib\FlyWeight::Sington();
+		}
+		
+		return $FlyWeight->init($class, $namespace);
+	}
+	
 	
 	
 	

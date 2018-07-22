@@ -1,5 +1,6 @@
 <?php
 	namespace controller;
+	
 	//index控制器
 	class index extends base{
 		
@@ -25,6 +26,21 @@
 		//空操作
 		public function _empty(){
 			echo 'test empty';
+		}
+		
+		public function aa()
+		{
+			$c = import('test','usr');
+			
+			$c->one();
+			
+			$c = import('test','usr');
+			
+			$c->one();
+			$c = import('test','usr');
+			
+			$c->two();
+			
 		}
 		
 	}
