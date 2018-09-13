@@ -27,5 +27,10 @@
 		public function bb(){
 			$this->jump('http://www.baidu.com');
 		}
+		
+		//test composer
+		public function cc(){
+			var_dump(\Ws\Http\Request::create());
+		}
 	}
 	

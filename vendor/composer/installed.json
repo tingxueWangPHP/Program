@@ -1,0 +1,47 @@
+[
+    {
+        "name": "toohamster/ws-http",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/toohamster/ws-http.git",
+            "reference": "79cf6ef17df8df80c0bb86451bd3e1d0adebd60b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/toohamster/ws-http/zipball/79cf6ef17df8df80c0bb86451bd3e1d0adebd60b",
+            "reference": "79cf6ef17df8df80c0bb86451bd3e1d0adebd60b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2016-08-04 06:05:05",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [],
+            "files": [],
+            "psr-4": {
+                "Ws\\Http\\": "src/Ws/Http"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "toohamster",
+                "email": "449211678@qq.com"
+            }
+        ],
+        "description": "ws-http: Simplified, lightweight HTTP client library",
+        "homepage": "https://github.com/toohamster/ws-http",
+        "keywords": [
+            "http",
+            "ws-http"
+        ]
+    }
+]

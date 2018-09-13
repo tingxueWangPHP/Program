@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "f4815cf08e8aadace4f122128cae3f0d",
+    "content-hash": "ffeba940d7c34f9c6e054bd9058757b6",
+    "packages": [
+        {
+            "name": "toohamster/ws-http",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/toohamster/ws-http.git",
+                "reference": "79cf6ef17df8df80c0bb86451bd3e1d0adebd60b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/toohamster/ws-http/zipball/79cf6ef17df8df80c0bb86451bd3e1d0adebd60b",
+                "reference": "79cf6ef17df8df80c0bb86451bd3e1d0adebd60b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [],
+                "files": [],
+                "psr-4": {
+                    "Ws\\Http\\": "src/Ws/Http"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "toohamster",
+                    "email": "449211678@qq.com"
+                }
+            ],
+            "description": "ws-http: Simplified, lightweight HTTP client library",
+            "homepage": "https://github.com/toohamster/ws-http",
+            "keywords": [
+                "http",
+                "ws-http"
+            ],
+            "time": "2016-08-04 06:05:05"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
