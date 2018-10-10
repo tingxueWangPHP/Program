@@ -1,4 +1,5 @@
 {
+	"name": "tingxueWangPHP/Program",
 	"repositories": {
 		"packagist": {
 			"type": "composer",
