@@ -10,5 +10,12 @@
 	
 	"require": {
         "toohamster/ws-http": "*"
-    }
+    },
+	
+	"autoload": {
+		"psr-4" : {
+			"lib\\": "lib/"
+		},
+		"files": ["config/config.php", "common/func.php"]
+	}
 }

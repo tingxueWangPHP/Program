@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'lib\\' => array($baseDir . '/lib'),
     'Ws\\Http\\' => array($vendorDir . '/toohamster/ws-http/src/Ws/Http'),
 );
