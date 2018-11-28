@@ -1,5 +1,6 @@
 <?php
 	namespace controller;
+	
 	class test extends base{
 		
 		public function index(){

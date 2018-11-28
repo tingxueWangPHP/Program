@@ -51,11 +51,13 @@ class route{
 		
 		$class = new \ReflectionClass(static::$controller);
 		
+		$construct_params = static::getConstructorArgs(static::$controller);//获取构造方法参数
+		
 		//支持空操作
 		$class->hasMethod(static::$function) or static::$function = '_empty';
 		
 		
-		$instance  = $class->newInstanceArgs();//相当于类的实例化
+		$instance  = $class->newInstanceArgs($construct_params);//相当于类的实例化
 		
 		//参数注入
 		$param = array();
@@ -69,6 +71,11 @@ class route{
 			foreach($method->getParameters() as $val){
 				if(isset($_GET[$val->name])){
 					$param[] = $_GET[$val->name];
+				} else {
+					//依赖注入兼容
+					if( $upstream = $val->getClass() ){
+						$param[] = $upstream->newInstanceArgs(static::getConstructorArgs($upstream->name));
+					}
 				}
 			}
 		}
@@ -84,6 +91,27 @@ class route{
 		/*$func = $class->getmethod(static::$function);
 	
 		$func->invokeArgs($instance, $param);*/
+		
+	}
+	
+	//构造方法 依赖注入
+	private static function getConstructorArgs($classname)
+	{
+		$res = [];
+		$class = new \ReflectionClass($classname);
+		//判断是否是构造方法
+		if ( $constructor = $class->getConstructor() ){
+			if ( $params = $constructor->getParameters() ) {//获取构造方法的参数
+				foreach($params as $arg) {
+					if($upstream = $arg->getClass()) {
+						$upstream_res = static::getConstructorArgs($upstream->getName());
+						$res[] = $upstream->newInstanceArgs($upstream_res);//获取实例
+					}
+				}
+			}
+		}
+		
+		return $res;
 		
 	}
 	

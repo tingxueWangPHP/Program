@@ -1,8 +1,21 @@
 <?php
 	namespace controller;
 	
+	use model\test;
+	use usr\test as test1;
+	
+	
 	//index控制器
 	class index extends base{
+		
+		private $testModel;
+		private $testUsr;
+		
+		//依赖注入
+		public function __construct(test $test, test1 $test1){
+			$this->testModel = $test;
+			$this->testUsr = $test1;
+		}
 		
 		public function index11(){
 			
@@ -11,6 +24,17 @@
 			$arr['data'] = $data;
 			
 			$this->display('index',$arr);//显示模版
+			
+		}
+		
+		//依赖注入
+		public function cc(test1 $test1, $name)
+		{
+			/*echo $this->testModel->index();
+			$this->testUsr->one();*/
+			$test1->one();
+			
+			echo $name;
 		}
 		
 		

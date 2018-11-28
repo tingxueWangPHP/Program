@@ -3,6 +3,7 @@
 	*控制器基类，定义每个控制器类所需的公共方法和变量
 	*/
 	namespace controller;
+	
 	class base{
 		protected $view = 'view';//指定模版文件存在的目录
 		
