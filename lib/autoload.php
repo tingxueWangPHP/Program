@@ -10,6 +10,8 @@ class autoload
 		
 		if (file_exists($file)) {
 			include $file;
+		} else {
+			throw new \lib\MyException('文件' . $file . '不存在');
 		}
 	}
 	

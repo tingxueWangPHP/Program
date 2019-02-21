@@ -1,6 +1,9 @@
 <?php
 	namespace controller;
 	
+	use usr\test as test1;
+
+	
 	class test extends base{
 		
 		public function index(){
@@ -13,7 +16,18 @@
 		
 		public function aa($id){
 			echo $id;
-			
+		}
+		
+		public function dd($name, test1 $test1)
+		{
+			$test1->two();
+			echo '<br/>';
+			echo $name;
+		}
+		
+		public function ee()
+		{
+			echo test1::two();
 		}
 		
 		//异常demo

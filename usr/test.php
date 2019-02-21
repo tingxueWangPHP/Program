@@ -7,6 +7,8 @@ class test
 {
 	private $testModel;
 	
+	public $name = 'yuanting';
+	
 	public function __construct(testaa $test)
 	{
 		$this->testModel = $test;
@@ -14,7 +16,7 @@ class test
 	
 	public function one()
 	{
-		echo 'test xiang yuan';
+		echo $this->testModel->index();
 	}
 	
 	public function two()

@@ -28,13 +28,13 @@
 		}
 		
 		//依赖注入
-		public function cc(test1 $test1, $name)
+		public function cc()
 		{
 			/*echo $this->testModel->index();
 			$this->testUsr->one();*/
-			$test1->one();
+			$this->testUsr->one();
 			
-			echo $name;
+			
 		}
 		
 		

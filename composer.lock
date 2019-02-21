@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f4815cf08e8aadace4f122128cae3f0d",
-    "content-hash": "ffeba940d7c34f9c6e054bd9058757b6",
+    "hash": "44dfc0e399496a7f856380d3c11c0a56",
+    "content-hash": "fe96c29d01f72bc7152fa0ee0e8b1ee8",
     "packages": [
         {
             "name": "toohamster/ws-http",

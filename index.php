@@ -3,8 +3,12 @@
 	
 	require './vendor/autoload.php';
 	
+	try {
+		\lib\route::run();
+	} catch (\Exception $e) {
+		echo $e->getMessage();
+	}
 	
-	\lib\route::run();
 	
 	
 	
